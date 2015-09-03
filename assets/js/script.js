@@ -3,11 +3,11 @@ function initMap() {
             "stylers": [{
                 "visibility": "simplified"
             }, {
-                "hue": "#00aaff"
+                "hue": "#74d1ff"
             }, {
-                "gamma": 0.52
+                "gamma": 5
             }, {
-                "weight": 0.4
+                "weight": 0.5
             }]
         }, {
             "featureType": "water",
@@ -63,11 +63,11 @@ function initMap() {
             "featureType": "water",
             "elementType": "geometry",
             "stylers": [{
-                "color": "#9cbfdd"
+                "color": "#ffffff"
             }, {
                 "weight": 0.1
             }, {
-                "saturation": -38
+                "saturation": 30
             }]
         }], {
             name: 'Custom Style'
@@ -76,8 +76,8 @@ function initMap() {
 
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {
-            lat: -33.8688,
-            lng: 151.2195
+            lat: 37.7833,
+            lng: -122.4167
         },
         zoom: 14,
         scrollwheel: false,
@@ -133,3 +133,13 @@ function initMap() {
     });
 
 }
+//prevent key enter to sumbit form
+function preventSubmit(e) {
+  var code = e.keyCode || e.which;
+  if (code == 13) {
+    e.preventDefault();
+    return false;
+  }
+}
+$('#pac-input').on('keyup keypress', preventSubmit);
+$('#signup').on('keyup keypress', preventSubmit);

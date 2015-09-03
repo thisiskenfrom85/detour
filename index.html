@@ -18,7 +18,7 @@
 	<div class="container">
 		<div class="valign-wrapper landing-head">
 			<div class="full-background">
-				<video></video>
+				<video height="100%" src="assets/sample.mp4" type="video/mp4" preload="auto" autoplay muted loop></video>
 			</div>
 			<div id="map"></div>
 			<div class="valign">
@@ -31,21 +31,20 @@
 				<section class="row">
 					<form id="signup" method="POST" action="http://api.cloudstitch.com/thisisken/magic-form/datasources/sheet">
 						<div class="row">
-							<div class="col m4 input-field">
-								<label>What are you?</label>
-							</div>
-							<div class="col m4 input-field">
+							<h3 class="col m4 landing-question">What are you interested in?</h3>
+							<div class="col m2 input-field">
 								<input role="radio" name="type-of-user" type="radio" id="casual" value="casual" checked="checked"/>
 								<label for="casual">Casual</label>
 							</div>
-							<div class="col m4 input-field">
+							<div class="col m2 input-field">
 								<input role="radio" name="type-of-user" type="radio" id="business" value="business" />
 								<label for="business">Business</label>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col m6 input-field">
-								<input name="email" type="email" placeholder="email">
+								<input name="email" type="email" class="validate">
+								<label for="email">Email</label>
 							</div>
 							<div class="col m6 input-field">
 								<button type="submit" class="btn">Get Notified </button>

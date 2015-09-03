@@ -8,13 +8,14 @@
     //background-image: url("/assets/munich.jpg");
     background-position: center;
     background-size: cover;
+    opacity: 1;
 }
 .landing-head {
     height: 100vh;
 }
 .landing-tagline {
     display: inline-block;
-    font-weight: 700;
+    font-weight: 600;
 }
 .landing-subtagline {
     font-size: 2.4rem;
@@ -27,7 +28,37 @@
     font-size: 4.2rem !important;
     font-weight: 300;
 }
-
+.landing-question {
+    font-size: 1.8rem;
+    font-weight: 200;
+    margin: 1.46rem 0 0 0;
+}
 #map {
     @extend .full-background;
+    background-color: rgb(79, 79, 79);
+    opacity: 0.55;
+    z-index: -1;
+}
+.pac-container {
+    border-top: none;
+    border-radius: 0;
+    font-family: roboto;
+    font-weight: 300;
+}
+.pac-item {
+    cursor: pointer;
+    padding: 8px;
+    border-top: none;
+    &:first-child {
+        padding-top: 16px;
+    }
+
+}
+.pac-item-query {
+    font-size: 1.8rem;
+    padding-right: 5px;
+    color: rgba(black , 0.8 );
+}
+.pac-matched {
+    color: black;
 }
