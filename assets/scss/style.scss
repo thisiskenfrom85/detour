@@ -1,0 +1,33 @@
+.full-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    //background-image: url("/assets/munich.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.landing-head {
+    height: 100vh;
+}
+.landing-tagline {
+    display: inline-block;
+    font-weight: 700;
+}
+.landing-subtagline {
+    font-size: 2.4rem;
+    font-weight: 100;
+    width: 80%;
+}
+.inline-input {
+    height: auto !important;
+    width: auto !important;
+    font-size: 4.2rem !important;
+    font-weight: 300;
+}
+
+#map {
+    @extend .full-background;
+}
