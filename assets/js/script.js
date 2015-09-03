@@ -143,3 +143,11 @@ function preventSubmit(e) {
 }
 $('#pac-input').on('keyup keypress', preventSubmit);
 $('#signup').on('keyup keypress', preventSubmit);
+
+var isCheck = $('.thumb-input:checked')
+if(isCheck) {
+    $(this).siblings('.thumb-label').find('.svgfill').addClass('activefill');
+};
+$('.input-field').click(function(){
+    $(this).find('.svgfill').addClass('activefill');  
+});

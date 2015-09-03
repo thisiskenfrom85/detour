@@ -1,3 +1,7 @@
+#landing-inputs {
+    font-weight: 200;
+    font-size: 1.8rem;
+}
 .full-background {
     position: absolute;
     top: 0;
@@ -9,6 +13,12 @@
     background-position: center;
     background-size: cover;
     opacity: 1;
+    overflow: hidden;
+}
+.landing-logo {
+    width: 100px;
+    height: 100px;
+    margin-left: -0.75rem;
 }
 .landing-head {
     height: 100vh;
@@ -16,6 +26,7 @@
 .landing-tagline {
     display: inline-block;
     font-weight: 600;
+    color:rgba(39, 39, 39, 0.95);
 }
 .landing-subtagline {
     font-size: 2.4rem;
@@ -27,11 +38,55 @@
     width: auto !important;
     font-size: 4.2rem !important;
     font-weight: 300;
+    color: #ffffff;
+    &::-webkit-input-placeholder {
+        color: #ffffff;
+    }
 }
 .landing-question {
-    font-size: 1.8rem;
-    font-weight: 200;
+    @extend #landing-inputs;
     margin: 1.46rem 0 0 0;
+}
+.input-field {
+    .svgfill {
+        transition: fill .4s ease;
+        fill: rgba(0,0,0,0);
+    }
+    &:hover .svgfill {
+        fill: rgba(#00ffc4, 0.5);
+    }
+    .activefill {
+        fill: rgba(#00ffc4, 0.5);
+    }
+    .landing-label {
+        font-size: 1.8rem !important;
+        font-weight: 200;
+        color: white;
+        &:before, &:after {
+            content: none;
+            padding-left: 0;
+        }
+        &:not(:checked), &:checked {
+                padding-left: 0;
+            }
+        vertical-align: top;
+    }
+    .email-input {
+        @extend #landing-inputs;
+        height: 4rem;
+        color: #ffffff;
+    }
+    .email-label {
+        @extend #landing-inputs;
+        color: white;
+        &.active {
+            font-size: 1rem;
+        }
+    }
+}
+.thumb-label {
+    width: 40px;
+    display: inline-block;
 }
 #map {
     @extend .full-background;
@@ -55,7 +110,7 @@
 
 }
 .pac-item-query {
-    font-size: 1.8rem;
+    @extend #landing-inputs;
     padding-right: 5px;
     color: rgba(black , 0.8 );
 }

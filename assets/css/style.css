@@ -1,4 +1,10 @@
 /* line 1, ../scss/style.scss */
+#landing-inputs, .landing-question, .input-field .email-input, .input-field .email-label, .pac-item-query {
+  font-weight: 200;
+  font-size: 1.8rem;
+}
+
+/* line 5, ../scss/style.scss */
 .full-background, #map {
   position: absolute;
   top: 0;
@@ -9,49 +15,111 @@
   background-position: center;
   background-size: cover;
   opacity: 1;
+  overflow: hidden;
 }
 
-/* line 13, ../scss/style.scss */
+/* line 18, ../scss/style.scss */
+.landing-logo {
+  width: 100px;
+  height: 100px;
+  margin-left: -0.75rem;
+}
+
+/* line 23, ../scss/style.scss */
 .landing-head {
   height: 100vh;
 }
 
-/* line 16, ../scss/style.scss */
+/* line 26, ../scss/style.scss */
 .landing-tagline {
   display: inline-block;
   font-weight: 600;
+  color: rgba(39, 39, 39, 0.95);
 }
 
-/* line 20, ../scss/style.scss */
+/* line 31, ../scss/style.scss */
 .landing-subtagline {
   font-size: 2.4rem;
   font-weight: 100;
   width: 80%;
 }
 
-/* line 25, ../scss/style.scss */
+/* line 36, ../scss/style.scss */
 .inline-input {
   height: auto !important;
   width: auto !important;
   font-size: 4.2rem !important;
   font-weight: 300;
+  color: #ffffff;
+}
+/* line 42, ../scss/style.scss */
+.inline-input::-webkit-input-placeholder {
+  color: #ffffff;
 }
 
-/* line 31, ../scss/style.scss */
+/* line 46, ../scss/style.scss */
 .landing-question {
-  font-size: 1.8rem;
-  font-weight: 200;
   margin: 1.46rem 0 0 0;
 }
 
-/* line 36, ../scss/style.scss */
+/* line 51, ../scss/style.scss */
+.input-field .svgfill {
+  -webkit-transition: fill .4s ease;
+          transition: fill .4s ease;
+  fill: transparent;
+}
+/* line 55, ../scss/style.scss */
+.input-field:hover .svgfill {
+  fill: rgba(0, 255, 196, 0.5);
+}
+/* line 58, ../scss/style.scss */
+.input-field .activefill {
+  fill: rgba(0, 255, 196, 0.5);
+}
+/* line 61, ../scss/style.scss */
+.input-field .landing-label {
+  font-size: 1.8rem !important;
+  font-weight: 200;
+  color: white;
+  vertical-align: top;
+}
+/* line 65, ../scss/style.scss */
+.input-field .landing-label:before, .input-field .landing-label:after {
+  content: none;
+  padding-left: 0;
+}
+/* line 69, ../scss/style.scss */
+.input-field .landing-label:not(:checked), .input-field .landing-label:checked {
+  padding-left: 0;
+}
+/* line 74, ../scss/style.scss */
+.input-field .email-input {
+  height: 4rem;
+  color: #ffffff;
+}
+/* line 79, ../scss/style.scss */
+.input-field .email-label {
+  color: white;
+}
+/* line 82, ../scss/style.scss */
+.input-field .email-label.active {
+  font-size: 1rem;
+}
+
+/* line 87, ../scss/style.scss */
+.thumb-label {
+  width: 40px;
+  display: inline-block;
+}
+
+/* line 91, ../scss/style.scss */
 #map {
   background-color: #4f4f4f;
   opacity: 0.55;
   z-index: -1;
 }
 
-/* line 42, ../scss/style.scss */
+/* line 97, ../scss/style.scss */
 .pac-container {
   border-top: none;
   border-radius: 0;
@@ -59,25 +127,24 @@
   font-weight: 300;
 }
 
-/* line 48, ../scss/style.scss */
+/* line 103, ../scss/style.scss */
 .pac-item {
   cursor: pointer;
   padding: 8px;
   border-top: none;
 }
-/* line 52, ../scss/style.scss */
+/* line 107, ../scss/style.scss */
 .pac-item:first-child {
   padding-top: 16px;
 }
 
-/* line 57, ../scss/style.scss */
+/* line 112, ../scss/style.scss */
 .pac-item-query {
-  font-size: 1.8rem;
   padding-right: 5px;
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 62, ../scss/style.scss */
+/* line 117, ../scss/style.scss */
 .pac-matched {
   color: black;
 }
