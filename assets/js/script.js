@@ -144,10 +144,11 @@ function preventSubmit(e) {
 $('#pac-input').on('keyup keypress', preventSubmit);
 $('#signup').on('keyup keypress', preventSubmit);
 
-var isCheck = $('.thumb-input:checked')
+var isCheck = $('.thumb-input').prop('checked');
 if(isCheck) {
-    $(this).siblings('.thumb-label').find('.svgfill').addClass('activefill');
+    $(this).siblings('.thumb-label').find('.svgfill').css({ "fill": "#00ffc4","fill-opacity": "0.5"});
 };
-$('.input-field').click(function(){
-    $(this).find('.svgfill').addClass('activefill');  
+$('.landing-label').on('click',function(){
+    $('.svgfill').css({'fill-opacity':'0'});
+    $(this).siblings('.thumb-label').find('.svgfill').css({ "fill": "#00ffc4","fill-opacity": "0.5"});
 });
