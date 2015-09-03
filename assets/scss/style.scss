@@ -15,6 +15,11 @@
     opacity: 1;
     overflow: hidden;
 }
+.whitefilter {
+    @extend .full-background;
+    background: white;
+    opacity: 0.5;
+}
 .landing-logo {
     width: 100px;
     height: 100px;
