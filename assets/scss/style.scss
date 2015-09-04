@@ -111,9 +111,6 @@ input[type=text].inline-input {
     }
     .landing-label {
         color: $accent-color;
-        @include media('>=phone', '<=desktop')  {
-            color: $primary-color-text;
-        }
         &:before, &:after {
             content: none;
             padding-left: 0;
