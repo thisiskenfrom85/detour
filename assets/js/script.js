@@ -7,7 +7,7 @@ function initMap() {
             }, {
                 "gamma": 5
             }, {
-                "weight": 0.5
+                "weight": 0.25
             }]
         }, {
             "featureType": "water",
@@ -63,11 +63,11 @@ function initMap() {
             "featureType": "water",
             "elementType": "geometry",
             "stylers": [{
-                "color": "#ffffff"
+                "color": "#555555"
             }, {
                 "weight": 0.1
             }, {
-                "saturation": 30
+                // "saturation": 30
             }]
         }], {
             name: 'Custom Style'

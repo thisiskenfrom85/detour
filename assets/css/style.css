@@ -12485,7 +12485,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 @media (min-width: 320px) and (max-width: 1024px) {
   /* line 11, ../scss/style.scss */
   .full-background, #map {
-    background-image: url("/assets/mobile-bkg.jpg");
+    background-image: url("../mobile-bkg.jpg");
   }
   /* line 23, ../scss/style.scss */
   .full-background video, #map video {
@@ -12651,8 +12651,8 @@ input[type=text].inline-input::-webkit-input-placeholder {
 
 /* line 142, ../scss/style.scss */
 #map {
-  background-color: #4f4f4f;
-  opacity: 0.55;
+  background-color: rgba(255, 255, 255, 0.66) !important;
+  opacity: 0.99;
   z-index: -1;
 }
 
