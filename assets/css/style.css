@@ -12488,6 +12488,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   /* line 24, ../scss/style.scss */
   .full-background, .whitefilter, #map {
     background-image: url("../mobile-bkg.jpg");
+    background-position: center;
+    background-size: cover;
   }
   /* line 36, ../scss/style.scss */
   .full-background video, .whitefilter video, #map video {
@@ -12495,7 +12497,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   }
 }
 
-/* line 42, ../scss/style.scss */
+/* line 44, ../scss/style.scss */
 .whitefilter {
   background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #000000 100%);
   background-image: linear-gradient(to bottom, #FFFFFF 0%, #000000 100%);
@@ -12503,7 +12505,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   z-index: -1;
 }
 
-/* line 48, ../scss/style.scss */
+/* line 50, ../scss/style.scss */
 .landing-logo {
   min-width: 50px;
   min-height: 50px;
@@ -12514,12 +12516,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   margin-left: -0.75rem;
 }
 
-/* line 57, ../scss/style.scss */
+/* line 59, ../scss/style.scss */
 .landing-head {
   height: 100vh;
 }
 @media (min-width: 320px) and (max-width: 1024px) {
-  /* line 57, ../scss/style.scss */
+  /* line 59, ../scss/style.scss */
   .landing-head {
     width: 100%;
     padding: 1em;
@@ -12530,27 +12532,27 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   }
 }
 
-/* line 65, ../scss/style.scss */
+/* line 67, ../scss/style.scss */
 .landing-tagline {
   display: inline-block;
   font-weight: 600;
   color: #212121;
 }
 @media (min-width: 320px) and (max-width: 1024px) {
-  /* line 65, ../scss/style.scss */
+  /* line 67, ../scss/style.scss */
   .landing-tagline {
     line-height: 90%;
   }
 }
 
-/* line 73, ../scss/style.scss */
+/* line 75, ../scss/style.scss */
 .landing-subtagline {
   font-size: 2.4rem;
   font-weight: 100;
   width: 80%;
 }
 @media (min-width: 320px) and (max-width: 1024px) {
-  /* line 73, ../scss/style.scss */
+  /* line 75, ../scss/style.scss */
   .landing-subtagline {
     font-size: 1.6rem;
     width: 100%;
@@ -12558,7 +12560,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   }
 }
 
-/* line 83, ../scss/style.scss */
+/* line 85, ../scss/style.scss */
 input[type=text].inline-input {
   height: auto;
   width: 66%;
@@ -12566,59 +12568,59 @@ input[type=text].inline-input {
   font-weight: 300;
   color: #FFFFFF;
 }
-/* line 89, ../scss/style.scss */
+/* line 91, ../scss/style.scss */
 input[type=text].inline-input::-webkit-input-placeholder {
   color: #FFFFFF;
 }
 @media (min-width: 320px) and (max-width: 1024px) {
-  /* line 83, ../scss/style.scss */
+  /* line 85, ../scss/style.scss */
   input[type=text].inline-input {
     font-size: 2.4rem;
     width: 100%;
   }
 }
 
-/* line 97, ../scss/style.scss */
+/* line 99, ../scss/style.scss */
 .landing-question {
   margin: 1.46rem 0 0 0;
   color: #FFFFFF;
 }
 
-/* line 103, ../scss/style.scss */
+/* line 105, ../scss/style.scss */
 .input-field .svgfill {
   -webkit-transition: fill .4s ease;
           transition: fill .4s ease;
   fill: transparent;
 }
-/* line 107, ../scss/style.scss */
+/* line 109, ../scss/style.scss */
 .input-field:hover .svgfill, .input-field:active .svgfill {
   fill: rgba(0, 150, 136, 0.5);
 }
-/* line 110, ../scss/style.scss */
+/* line 112, ../scss/style.scss */
 .input-field .landing-label {
   color: #009688;
   vertical-align: top;
 }
 @media (min-width: 320px) and (max-width: 1024px) {
-  /* line 110, ../scss/style.scss */
+  /* line 112, ../scss/style.scss */
   .input-field .landing-label {
     color: #FFFFFF;
   }
 }
 
-/* line 115, ../scss/style.scss */
+/* line 117, ../scss/style.scss */
 .input-field .landing-label:before, .input-field .landing-label:after {
   content: none;
   padding-left: 0;
 }
-/* line 119, ../scss/style.scss */
+/* line 121, ../scss/style.scss */
 .input-field .landing-label:not(:checked), .input-field .landing-label:checked {
   padding-left: 0;
   font-size: 1.4rem;
   font-weight: 200;
 }
 @media (min-width: 320px) and (max-width: 1024px) {
-  /* line 119, ../scss/style.scss */
+  /* line 121, ../scss/style.scss */
   .input-field .landing-label:not(:checked), .input-field .landing-label:checked {
     font-size: 1rem;
     text-align: center;
@@ -12630,27 +12632,27 @@ input[type=text].inline-input::-webkit-input-placeholder {
   }
 }
 
-/* line 135, ../scss/style.scss */
+/* line 137, ../scss/style.scss */
 .input-field .email-input {
   height: 4rem;
   color: #FFFFFF;
 }
-/* line 140, ../scss/style.scss */
+/* line 142, ../scss/style.scss */
 .input-field .email-label {
   color: #FFFFFF;
 }
-/* line 143, ../scss/style.scss */
+/* line 145, ../scss/style.scss */
 .input-field .email-label.active {
   font-size: 1rem;
 }
 
-/* line 148, ../scss/style.scss */
+/* line 150, ../scss/style.scss */
 .thumb-label {
   width: 40px;
   display: inline-block;
 }
 @media (min-width: 320px) and (max-width: 1024px) {
-  /* line 148, ../scss/style.scss */
+  /* line 150, ../scss/style.scss */
   .thumb-label {
     display: block;
     width: 25px;
@@ -12659,7 +12661,7 @@ input[type=text].inline-input::-webkit-input-placeholder {
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {
-  /* line 157, ../scss/style.scss */
+  /* line 159, ../scss/style.scss */
   .landing-cta {
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     background-color: #B6B6B6;
@@ -12668,37 +12670,37 @@ input[type=text].inline-input::-webkit-input-placeholder {
   }
 }
 
-/* line 167, ../scss/style.scss */
+/* line 169, ../scss/style.scss */
 .landing-cta-button:after {
   content: url("../app-store-icon.png");
   vertical-align: -20px;
   padding-left: 10px;
 }
 @media (min-width: 320px) and (max-width: 1024px) {
-  /* line 173, ../scss/style.scss */
+  /* line 175, ../scss/style.scss */
   .landing-cta-button:after {
     padding: 0;
   }
-  /* line 176, ../scss/style.scss */
+  /* line 178, ../scss/style.scss */
   .landing-cta-button button {
     margin-bottom: 20px;
   }
 }
 
-/* line 181, ../scss/style.scss */
+/* line 183, ../scss/style.scss */
 #map {
   background-color: rgba(255, 255, 255, 0.65) !important;
   opacity: 0.85;
   z-index: -2;
 }
 @media (min-width: 320px) and (max-width: 1024px) {
-  /* line 181, ../scss/style.scss */
+  /* line 183, ../scss/style.scss */
   #map {
     opacity: 0.45;
   }
 }
 
-/* line 190, ../scss/style.scss */
+/* line 192, ../scss/style.scss */
 .pac-container {
   border-top: none;
   border-radius: 0;
@@ -12706,24 +12708,24 @@ input[type=text].inline-input::-webkit-input-placeholder {
   font-weight: 300;
 }
 
-/* line 196, ../scss/style.scss */
+/* line 198, ../scss/style.scss */
 .pac-item {
   cursor: pointer;
   padding: 8px;
   border-top: none;
 }
-/* line 200, ../scss/style.scss */
+/* line 202, ../scss/style.scss */
 .pac-item:first-child {
   padding-top: 16px;
 }
 
-/* line 205, ../scss/style.scss */
+/* line 207, ../scss/style.scss */
 .pac-item-query {
   padding-right: 5px;
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 210, ../scss/style.scss */
+/* line 212, ../scss/style.scss */
 .pac-matched {
   color: black;
 }
