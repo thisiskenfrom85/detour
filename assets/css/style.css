@@ -2928,7 +2928,6 @@ figure {
  */
 /* line 211, ../scss/components/_normalize.scss */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -3082,8 +3081,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box;
 }
@@ -3180,14 +3177,14 @@ a {
 /* line 37, ../scss/components/_global.scss */
 .valign-wrapper {
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 /* line 41, ../scss/components/_global.scss */
 .valign-wrapper .valign {
@@ -3245,7 +3242,8 @@ ul li {
 
 /* line 83, ../scss/components/_global.scss */
 .hoverable:hover {
-  transition: box-shadow .25s;
+  -webkit-transition: box-shadow .25s;
+          transition: box-shadow .25s;
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -3380,7 +3378,9 @@ video.responsive-video {
   min-height: 100%;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 /* line 221, ../scss/components/_global.scss */
@@ -3404,7 +3404,9 @@ ul.staggered-list li {
 /* line 236, ../scss/components/_global.scss */
 .fade-in {
   opacity: 0;
-  transform-origin: 0 50%;
+  -webkit-transform-origin: 0 50%;
+      -ms-transform-origin: 0 50%;
+          transform-origin: 0 50%;
 }
 
 /*********************
@@ -3527,9 +3529,6 @@ table.striped > tbody > tr > td {
 /* line 344, ../scss/components/_global.scss */
 table.hoverable > tbody > tr {
   -webkit-transition: background-color 0.25s ease;
-  -moz-transition: background-color 0.25s ease;
-  -o-transition: background-color 0.25s ease;
-  -ms-transition: background-color 0.25s ease;
   transition: background-color 0.25s ease;
 }
 /* line 346, ../scss/components/_global.scss */
@@ -3709,9 +3708,6 @@ td, th {
 .collection a.collection-item {
   display: block;
   -webkit-transition: 0.25s;
-  -moz-transition: 0.25s;
-  -o-transition: 0.25s;
-  -ms-transition: 0.25s;
   transition: 0.25s;
   color: #26a69a;
 }
@@ -3750,8 +3746,6 @@ span.badge {
   color: #757575;
   position: absolute;
   right: 15px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 /* line 553, ../scss/components/_global.scss */
@@ -3808,9 +3802,6 @@ span.badge.new:after {
   bottom: 0;
   background-color: #26a69a;
   -webkit-transition: width 0.3s linear;
-  -moz-transition: width 0.3s linear;
-  -o-transition: width 0.3s linear;
-  -ms-transition: width 0.3s linear;
   transition: width 0.3s linear;
 }
 /* line 604, ../scss/components/_global.scss */
@@ -3827,9 +3818,6 @@ span.badge.new:after {
   bottom: 0;
   will-change: left, right;
   -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
-  -moz-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
-  -ms-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
-  -o-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
   animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
 }
 /* line 618, ../scss/components/_global.scss */
@@ -3842,32 +3830,12 @@ span.badge.new:after {
   bottom: 0;
   will-change: left, right;
   -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-  -moz-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-  -ms-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-  -o-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
   animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
   -webkit-animation-delay: 1.15s;
-  -moz-animation-delay: 1.15s;
-  -ms-animation-delay: 1.15s;
-  -o-animation-delay: 1.15s;
   animation-delay: 1.15s;
 }
 
 @-webkit-keyframes indeterminate {
-  0% {
-    left: -35%;
-    right: 100%;
-  }
-  60% {
-    left: 100%;
-    right: -90%;
-  }
-  100% {
-    left: 100%;
-    right: -90%;
-  }
-}
-@-moz-keyframes indeterminate {
   0% {
     left: -35%;
     right: 100%;
@@ -3896,20 +3864,6 @@ span.badge.new:after {
   }
 }
 @-webkit-keyframes indeterminate-short {
-  0% {
-    left: -200%;
-    right: 100%;
-  }
-  60% {
-    left: 107%;
-    right: -8%;
-  }
-  100% {
-    left: 107%;
-    right: -8%;
-  }
-}
-@-moz-keyframes indeterminate-short {
   0% {
     left: -200%;
     right: 100%;
@@ -4023,7 +3977,9 @@ span.badge.new:after {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 /* line 27, ../scss/components/_icons-material-design.scss */
 [class^="mdi-"]:before, [class*="mdi-"]:before {
@@ -4159,9 +4115,8 @@ span.badge.new:after {
   -webkit-animation: mdi-spin 2s infinite linear;
   animation: mdi-spin 2s infinite linear;
   -webkit-transform-origin: 50% 50%;
-  -moz-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
 }
 
 /* line 125, ../scss/components/_icons-material-design.scss */
@@ -4169,9 +4124,8 @@ span.badge.new:after {
   -webkit-animation: mdi-spin 1s steps(8) infinite;
   animation: mdi-spin 1s steps(8) infinite;
   -webkit-transform-origin: 50% 50%;
-  -moz-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
 }
 
 @-webkit-keyframes mdi-spin {
@@ -4240,7 +4194,8 @@ span.badge.new:after {
 :root .mdi-rotate-270,
 :root .mdi-flip-horizontal,
 :root .mdi-flip-vertical {
-  filter: none;
+  -webkit-filter: none;
+          filter: none;
 }
 
 /* line 190, ../scss/components/_icons-material-design.scss */
@@ -8136,8 +8091,6 @@ span.badge.new:after {
 /* line 49, ../scss/components/_grid.scss */
 .row .col {
   float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 0.75rem;
 }
@@ -8524,9 +8477,7 @@ nav .brand-logo {
 nav .brand-logo.center {
   left: 50%;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 @media only screen and (max-width: 992px) {
@@ -8534,9 +8485,7 @@ nav .brand-logo.center {
   nav .brand-logo {
     left: 50%;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 }
@@ -8552,9 +8501,6 @@ nav ul {
 /* line 71, ../scss/components/_navbar.scss */
 nav ul li {
   -webkit-transition: background-color 0.3s;
-  -moz-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  -ms-transition: background-color 0.3s;
   transition: background-color 0.3s;
   float: left;
   padding: 0;
@@ -8599,9 +8545,6 @@ nav .input-field label {
 nav .input-field label i {
   color: rgba(255, 255, 255, 0.7);
   -webkit-transition: color 0.3s;
-  -moz-transition: color 0.3s;
-  -o-transition: color 0.3s;
-  -ms-transition: color 0.3s;
   transition: color 0.3s;
 }
 /* line 116, ../scss/components/_navbar.scss */
@@ -8611,9 +8554,7 @@ nav .input-field label.active i {
 /* line 117, ../scss/components/_navbar.scss */
 nav .input-field label.active {
   -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
   -ms-transform: translateY(0);
-  -o-transform: translateY(0);
   transform: translateY(0);
 }
 
@@ -8913,7 +8854,8 @@ small {
 
 /* line 3, ../scss/components/_cards.scss */
 .card-panel {
-  transition: box-shadow .25s;
+  -webkit-transition: box-shadow .25s;
+          transition: box-shadow .25s;
   padding: 20px;
   margin: 0.5rem 0 1rem 0;
   border-radius: 2px;
@@ -8926,7 +8868,8 @@ small {
   overflow: hidden;
   margin: 0.5rem 0 1rem 0;
   background-color: #fff;
-  transition: box-shadow .25s;
+  -webkit-transition: box-shadow .25s;
+          transition: box-shadow .25s;
   border-radius: 2px;
 }
 /* line 22, ../scss/components/_cards.scss */
@@ -9039,9 +8982,6 @@ small {
   color: #ffab40;
   margin-right: 20px;
   -webkit-transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  -ms-transition: color 0.3s ease;
   transition: color 0.3s ease;
   text-transform: uppercase;
 }
@@ -9114,16 +9054,18 @@ small {
   font-weight: 300;
   color: #fff;
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
   -webkit-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /* line 43, ../scss/components/_toast.scss */
 .toast .btn, .toast .btn-large, .toast .btn-flat {
@@ -9183,9 +9125,6 @@ small {
   width: 100%;
   height: 100%;
   -webkit-transition: color 0.28s ease;
-  -moz-transition: color 0.28s ease;
-  -o-transition: color 0.28s ease;
-  -ms-transition: color 0.28s ease;
   transition: color 0.28s ease;
 }
 /* line 27, ../scss/components/_tabs.scss */
@@ -9242,9 +9181,7 @@ small {
   background-color: #323232;
   z-index: -1;
   -webkit-transform-origin: 50% 10%;
-  -moz-transform-origin: 50% 10%;
   -ms-transform-origin: 50% 10%;
-  -o-transform-origin: 50% 10%;
   transform-origin: 50% 10%;
   will-change: transform, opacity;
 }
@@ -9294,9 +9231,6 @@ small {
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: 0.2s ease-out;
-  -moz-transition: 0.2s ease-out;
-  -o-transition: 0.2s ease-out;
-  -ms-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
   cursor: pointer;
 }
@@ -9318,7 +9252,8 @@ small {
   padding: 0;
   background-color: #26a69a;
   border-radius: 50%;
-  transition: .3s;
+  -webkit-transition: .3s;
+          transition: .3s;
   cursor: pointer;
   vertical-align: middle;
 }
@@ -9468,9 +9403,6 @@ button.btn-floating {
   z-index: 1;
   will-change: opacity, transform;
   -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 /* line 39, ../scss/components/_waves.scss */
@@ -9484,18 +9416,11 @@ button.btn-floating {
   opacity: 0;
   background: rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.7s ease-out;
-  -moz-transition: all 0.7s ease-out;
-  -o-transition: all 0.7s ease-out;
-  -ms-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out;
   -webkit-transition-property: -webkit-transform, opacity;
-  -moz-transition-property: -moz-transform, opacity;
-  -o-transition-property: -o-transform, opacity;
   transition-property: transform, opacity;
   -webkit-transform: scale(0);
-  -moz-transform: scale(0);
   -ms-transform: scale(0);
-  -o-transform: scale(0);
   transform: scale(0);
   pointer-events: none;
 }
@@ -9531,18 +9456,13 @@ button.btn-floating {
 /* line 89, ../scss/components/_waves.scss */
 .waves-notransition {
   -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -o-transition: none !important;
-  -ms-transition: none !important;
   transition: none !important;
 }
 
 /* line 93, ../scss/components/_waves.scss */
 .waves-circle {
   -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 }
@@ -9707,8 +9627,6 @@ a.waves-effect .waves-ripple {
 .collapsible-body {
   display: none;
   border-bottom: 1px solid #ddd;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 /* line 34, ../scss/components/_collapsible.scss */
@@ -9757,7 +9675,8 @@ a.waves-effect .waves-ripple {
 .collapsible.popout > li {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   margin: 0 24px;
-  transition: margin 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition: margin 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition: margin 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 /* line 80, ../scss/components/_collapsible.scss */
 .collapsible.popout > li.active {
@@ -9767,12 +9686,10 @@ a.waves-effect .waves-ripple {
 
 /* line 1, ../scss/components/_materialbox.scss */
 .materialboxed {
+  cursor: -webkit-zoom-in;
   cursor: zoom-in;
   position: relative;
   -webkit-transition: opacity 0.4s;
-  -moz-transition: opacity 0.4s;
-  -o-transition: opacity 0.4s;
-  -ms-transition: opacity 0.4s;
   transition: opacity 0.4s;
 }
 /* line 6, ../scss/components/_materialbox.scss */
@@ -9786,6 +9703,7 @@ a.waves-effect .waves-ripple {
 
 /* line 14, ../scss/components/_materialbox.scss */
 .materialboxed.active {
+  cursor: -webkit-zoom-out;
   cursor: zoom-out;
 }
 
@@ -9882,10 +9800,9 @@ textarea.materialize-textarea {
   margin: 0 0 15px 0;
   padding: 0;
   box-shadow: none;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
-  transition: all .3s;
+  -webkit-transition: all .3s;
+          transition: all .3s;
 }
 /* line 67, ../scss/components/_form.scss */
 input[type=text]:disabled, input[type=text][readonly="readonly"],
@@ -10084,7 +10001,8 @@ textarea.materialize-textarea + label:after {
   position: absolute;
   top: 65px;
   opacity: 0;
-  transition: .2s opacity ease-out, .2s color ease-out;
+  -webkit-transition: .2s opacity ease-out, .2s color ease-out;
+          transition: .2s opacity ease-out, .2s color ease-out;
 }
 
 /* line 123, ../scss/components/_form.scss */
@@ -10101,18 +10019,13 @@ textarea.materialize-textarea + label:after {
   font-size: 1rem;
   cursor: text;
   -webkit-transition: 0.2s ease-out;
-  -moz-transition: 0.2s ease-out;
-  -o-transition: 0.2s ease-out;
-  -ms-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
 /* line 136, ../scss/components/_form.scss */
 .input-field label.active {
   font-size: 0.8rem;
   -webkit-transform: translateY(-140%);
-  -moz-transform: translateY(-140%);
   -ms-transform: translateY(-140%);
-  -o-transform: translateY(-140%);
   transform: translateY(-140%);
 }
 /* line 142, ../scss/components/_form.scss */
@@ -10121,9 +10034,6 @@ textarea.materialize-textarea + label:after {
   width: 3rem;
   font-size: 2rem;
   -webkit-transition: color 0.2s;
-  -moz-transition: color 0.2s;
-  -o-transition: color 0.2s;
-  -ms-transition: color 0.2s;
   transition: color 0.2s;
 }
 /* line 148, ../scss/components/_form.scss */
@@ -10190,7 +10100,8 @@ textarea.materialize-textarea + label:after {
   color: transparent;
   cursor: pointer;
   font-size: 2rem;
-  transition: .3s color;
+  -webkit-transition: .3s color;
+          transition: .3s color;
 }
 
 /* line 212, ../scss/components/_form.scss */
@@ -10243,9 +10154,6 @@ textarea.materialize-textarea {
   line-height: 25px;
   font-size: 1rem;
   -webkit-transition: 0.28s ease;
-  -moz-transition: 0.28s ease;
-  -o-transition: 0.28s ease;
-  -ms-transition: 0.28s ease;
   transition: 0.28s ease;
   -webkit-user-select: none;
   /* webkit (safari, chrome) browsers */
@@ -10269,9 +10177,6 @@ textarea.materialize-textarea {
   height: 16px;
   z-index: 0;
   -webkit-transition: 0.28s ease;
-  -moz-transition: 0.28s ease;
-  -o-transition: 0.28s ease;
-  -ms-transition: 0.28s ease;
   transition: 0.28s ease;
 }
 
@@ -10288,9 +10193,7 @@ textarea.materialize-textarea {
   border: 2px solid #5a5a5a;
   z-index: -1;
   -webkit-transform: scale(0);
-  -moz-transform: scale(0);
   -ms-transform: scale(0);
-  -o-transform: scale(0);
   transform: scale(0);
 }
 
@@ -10308,9 +10211,7 @@ textarea.materialize-textarea {
   background-color: #26a69a;
   z-index: 0;
   -webkit-transform: scale(1.02);
-  -moz-transform: scale(1.02);
   -ms-transform: scale(1.02);
-  -o-transform: scale(1.02);
   transform: scale(1.02);
 }
 
@@ -10328,9 +10229,7 @@ textarea.materialize-textarea {
   background-color: #26a69a;
   z-index: 0;
   -webkit-transform: scale(0.5);
-  -moz-transform: scale(0.5);
   -ms-transform: scale(0.5);
-  -o-transform: scale(0.5);
   transform: scale(0.5);
 }
 
@@ -10429,9 +10328,6 @@ form p:last-child {
   border-radius: 1px;
   margin-top: 2px;
   -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -o-transition: 0.2s;
-  -ms-transition: 0.2s;
   transition: 0.2s;
 }
 /* line 401, ../scss/components/_form.scss */
@@ -10451,15 +10347,11 @@ form p:last-child {
   border-right: 2px solid #26a69a;
   border-bottom: 2px solid #26a69a;
   -webkit-transform: rotate(40deg);
-  -moz-transform: rotate(40deg);
   -ms-transform: rotate(40deg);
-  -o-transform: rotate(40deg);
   transform: rotate(40deg);
   -webkit-backface-visibility: hidden;
   -webkit-transform-origin: 100% 100%;
-  -moz-transform-origin: 100% 100%;
   -ms-transform-origin: 100% 100%;
-  -o-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
 }
 /* line 422, ../scss/components/_form.scss */
@@ -10480,15 +10372,11 @@ form p:last-child {
   border-right: 2px solid #26a69a;
   border-bottom: none;
   -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
   transform: rotate(90deg);
   -webkit-backface-visibility: hidden;
   -webkit-transform-origin: 100% 100%;
-  -moz-transform-origin: 100% 100%;
   -ms-transform-origin: 100% 100%;
-  -o-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
 }
 /* line 445, ../scss/components/_form.scss */
@@ -10508,7 +10396,8 @@ form p:last-child {
   left: 0;
   position: absolute;
   /* .1s delay is for check animation */
-  transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
+  -webkit-transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
+          transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
   z-index: 1;
 }
 /* line 468, ../scss/components/_form.scss */
@@ -10521,7 +10410,8 @@ form p:last-child {
   -webkit-transform: rotateZ(37deg);
   transform: rotateZ(37deg);
   -webkit-transform-origin: 20% 40%;
-  transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
 }
 /* line 480, ../scss/components/_form.scss */
 [type="checkbox"].filled-in:not(:checked) + label:after {
@@ -10545,7 +10435,8 @@ form p:last-child {
   -webkit-transform: rotateZ(37deg);
   transform: rotateZ(37deg);
   -webkit-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
 }
 /* line 505, ../scss/components/_form.scss */
 [type="checkbox"].filled-in:checked + label:after {
@@ -10620,7 +10511,8 @@ form p:last-child {
   background-color: #818181;
   border-radius: 15px;
   margin-right: 10px;
-  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+          transition: background 0.3s ease;
   vertical-align: middle;
   margin: 0 16px;
 }
@@ -10637,7 +10529,8 @@ form p:last-child {
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
   left: -5px;
   top: -3px;
-  transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease;
+  -webkit-transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease;
+          transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease;
 }
 
 /* line 586, ../scss/components/_form.scss */
@@ -10829,14 +10722,10 @@ input[type=range] + .thumb {
   top: 10px;
   margin-left: -6px;
   -webkit-transform-origin: 50% 50%;
-  -moz-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
   -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 /* line 753, ../scss/components/_form.scss */
@@ -10847,9 +10736,7 @@ input[type=range] + .thumb .value {
   color: #26a69a;
   font-size: 0;
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 /* line 762, ../scss/components/_form.scss */
@@ -10889,12 +10776,10 @@ input[type=range]::-webkit-slider-thumb {
   width: 14px;
   border-radius: 50%;
   background-color: #26a69a;
-  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
   margin: -5px 0 0 0;
   -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  -ms-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -11190,7 +11075,8 @@ select {
 }
 @keyframes container-rotate {
   to {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 /* line 61, ../scss/components/_preloader.scss */
@@ -11313,35 +11199,43 @@ select {
 }
 @keyframes fill-unfill-rotate {
   12.5% {
-    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
   }
   /* 0.5 * ARCSIZE */
   25% {
-    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
   }
   /* 1   * ARCSIZE */
   37.5% {
-    transform: rotate(405deg);
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
   }
   /* 1.5 * ARCSIZE */
   50% {
-    transform: rotate(540deg);
+    -webkit-transform: rotate(540deg);
+            transform: rotate(540deg);
   }
   /* 2   * ARCSIZE */
   62.5% {
-    transform: rotate(675deg);
+    -webkit-transform: rotate(675deg);
+            transform: rotate(675deg);
   }
   /* 2.5 * ARCSIZE */
   75% {
-    transform: rotate(810deg);
+    -webkit-transform: rotate(810deg);
+            transform: rotate(810deg);
   }
   /* 3   * ARCSIZE */
   87.5% {
-    transform: rotate(945deg);
+    -webkit-transform: rotate(945deg);
+            transform: rotate(945deg);
   }
   /* 3.5 * ARCSIZE */
   to {
-    transform: rotate(1080deg);
+    -webkit-transform: rotate(1080deg);
+            transform: rotate(1080deg);
   }
   /* 4   * ARCSIZE */
 }
@@ -11539,14 +11433,16 @@ select {
   left: 0;
   border-right-color: transparent !important;
   -webkit-transform: rotate(129deg);
-  transform: rotate(129deg);
+  -ms-transform: rotate(129deg);
+      transform: rotate(129deg);
 }
 /* line 272, ../scss/components/_preloader.scss */
 .circle-clipper.right .circle {
   left: -100%;
   border-left-color: transparent !important;
   -webkit-transform: rotate(-129deg);
-  transform: rotate(-129deg);
+  -ms-transform: rotate(-129deg);
+      transform: rotate(-129deg);
 }
 
 /* line 282, ../scss/components/_preloader.scss */
@@ -11576,13 +11472,16 @@ select {
 }
 @keyframes left-spin {
   from {
-    transform: rotate(130deg);
+    -webkit-transform: rotate(130deg);
+            transform: rotate(130deg);
   }
   50% {
-    transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
   }
   to {
-    transform: rotate(130deg);
+    -webkit-transform: rotate(130deg);
+            transform: rotate(130deg);
   }
 }
 @-webkit-keyframes right-spin {
@@ -11598,13 +11497,16 @@ select {
 }
 @keyframes right-spin {
   from {
-    transform: rotate(-130deg);
+    -webkit-transform: rotate(-130deg);
+            transform: rotate(-130deg);
   }
   50% {
-    transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
   }
   to {
-    transform: rotate(-130deg);
+    -webkit-transform: rotate(-130deg);
+            transform: rotate(-130deg);
   }
 }
 /* line 318, ../scss/components/_preloader.scss */
@@ -11715,9 +11617,6 @@ select {
   margin: 0 12px;
   background-color: #e0e0e0;
   -webkit-transition: background-color 0.3s;
-  -moz-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  -ms-transition: background-color 0.3s;
   transition: background-color 0.3s;
   border-radius: 50%;
 }
@@ -11798,7 +11697,6 @@ select {
 .picker__holder {
   position: fixed;
   -webkit-transition: background 0.15s ease-out, top 0s 0.15s;
-  -moz-transition: background 0.15s ease-out, top 0s 0.15s;
   transition: background 0.15s ease-out, top 0s 0.15s;
   -webkit-backface-visibility: hidden;
 }
@@ -11818,7 +11716,6 @@ select {
   -moz-opacity: 0;
   opacity: 0;
   -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
 
@@ -11870,11 +11767,7 @@ select {
     border: 1px solid #777777;
     border-top-color: #898989;
     border-bottom-width: 0;
-    -webkit-border-radius: 5px 5px 0 0;
-    -moz-border-radius: 5px 5px 0 0;
     border-radius: 5px 5px 0 0;
-    -webkit-box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
-    -moz-box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
     box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
   }
 }
@@ -11889,7 +11782,6 @@ select {
   zoom: 1;
   background: rgba(0, 0, 0, 0.32);
   -webkit-transition: background 0.15s ease-out;
-  -moz-transition: background 0.15s ease-out;
   transition: background 0.15s ease-out;
 }
 
@@ -12130,9 +12022,7 @@ select {
 .picker--focused .picker__day--selected {
   border-radius: 50%;
   -webkit-transform: scale(0.75);
-  -moz-transform: scale(0.75);
   -ms-transform: scale(0.75);
-  -o-transform: scale(0.75);
   transform: scale(0.75);
   background: #0089ec;
   color: #ffffff;
@@ -12160,9 +12050,18 @@ select {
 /* line 231, ../scss/components/date_picker/_default.date.scss */
 .picker__footer {
   text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /* line 237, ../scss/components/date_picker/_default.date.scss */
@@ -12357,9 +12256,7 @@ select {
 .picker--focused .picker__day--selected {
   border-radius: 50%;
   -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
   -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
   transform: scale(0.9);
   background-color: #26a69a;
   color: #ffffff;
@@ -12602,6 +12499,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 /* line 44, ../scss/style.scss */
 .whitefilter {
+  background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #000000 100%);
   background-image: linear-gradient(to bottom, #FFFFFF 0%, #000000 100%);
   opacity: 0.5;
   z-index: -1;
@@ -12627,7 +12525,10 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   .landing-head {
     width: 100%;
     padding: 1em;
-    align-items: flex-start;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -12687,7 +12588,8 @@ input[type=text].inline-input::-webkit-input-placeholder {
 
 /* line 105, ../scss/style.scss */
 .input-field .svgfill {
-  transition: fill .4s ease;
+  -webkit-transition: fill .4s ease;
+          transition: fill .4s ease;
   fill: transparent;
 }
 /* line 109, ../scss/style.scss */
