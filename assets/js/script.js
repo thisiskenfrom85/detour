@@ -113,7 +113,7 @@ function initMap() {
             map.fitBounds(place.geometry.viewport);
         } else {
             map.setCenter(place.geometry.location);
-            map.setZoom(10); // Why 17? Because it looks good.
+            map.setZoom(14); // Why 17? Because it looks good.
         }
         marker.setIcon( /** @type {google.maps.Icon} */ ({
             url: place.icon,
@@ -131,7 +131,7 @@ function initMap() {
 //prevent key enter to sumbit form
 function preventSubmit(e) {
   var code = e.keyCode || e.which;
-  if (code == 14) {
+  if (code == 13) {
     e.preventDefault();
     return false;
   }
