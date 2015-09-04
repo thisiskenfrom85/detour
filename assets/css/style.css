@@ -12525,8 +12525,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     padding: 1em;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -12668,20 +12668,37 @@ input[type=text].inline-input::-webkit-input-placeholder {
   }
 }
 
-/* line 166, ../scss/style.scss */
+/* line 167, ../scss/style.scss */
+.landing-cta-button:after {
+  content: url("../app-store-icon.png");
+  vertical-align: -20px;
+  padding-left: 10px;
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  /* line 173, ../scss/style.scss */
+  .landing-cta-button:after {
+    padding: 0;
+  }
+  /* line 176, ../scss/style.scss */
+  .landing-cta-button button {
+    margin-bottom: 20px;
+  }
+}
+
+/* line 181, ../scss/style.scss */
 #map {
   background-color: rgba(255, 255, 255, 0.65) !important;
   opacity: 0.85;
   z-index: -2;
 }
 @media (min-width: 320px) and (max-width: 1024px) {
-  /* line 166, ../scss/style.scss */
+  /* line 181, ../scss/style.scss */
   #map {
     opacity: 0.45;
   }
 }
 
-/* line 175, ../scss/style.scss */
+/* line 190, ../scss/style.scss */
 .pac-container {
   border-top: none;
   border-radius: 0;
@@ -12689,24 +12706,24 @@ input[type=text].inline-input::-webkit-input-placeholder {
   font-weight: 300;
 }
 
-/* line 181, ../scss/style.scss */
+/* line 196, ../scss/style.scss */
 .pac-item {
   cursor: pointer;
   padding: 8px;
   border-top: none;
 }
-/* line 185, ../scss/style.scss */
+/* line 200, ../scss/style.scss */
 .pac-item:first-child {
   padding-top: 16px;
 }
 
-/* line 190, ../scss/style.scss */
+/* line 205, ../scss/style.scss */
 .pac-item-query {
   padding-right: 5px;
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 195, ../scss/style.scss */
+/* line 210, ../scss/style.scss */
 .pac-matched {
   color: black;
 }

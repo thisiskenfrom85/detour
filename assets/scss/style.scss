@@ -163,6 +163,21 @@ input[type=text].inline-input {
         padding: 2rem;
     }
 }
+.landing-cta-button {
+    &:after {
+    content:url('../app-store-icon.png');
+    vertical-align: -20px;
+    padding-left: 10px;
+    }
+    @include media('>=phone', '<=desktop') {
+        &:after {
+            padding: 0;
+        }
+        button {
+            margin-bottom: 20px;
+        }
+    }
+}
 #map {
     @extend .full-background;
     background-color: rgba($primary-color-text, 0.65) !important;
