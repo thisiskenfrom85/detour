@@ -110,7 +110,7 @@ input[type=text].inline-input {
         fill: rgba($accent-color, 0.5);
     }
     .landing-label {
-        color: $accent-color;
+        color: $primary-color-light;
         &:before, &:after {
             content: none;
             padding-left: 0;
