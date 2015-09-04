@@ -9,8 +9,7 @@
 	<meta name="HandheldFriendly" content="True" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- <link rel="shortcut icon" href="assets/favicon.ico"> -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
@@ -42,8 +41,8 @@
 				<section class="row">
 					<form id="signup" method="POST" action="http://api.cloudstitch.com/thisisken/magic-form-1/datasources/sheet">
 						<div class="row">
-							<h3 class="col m4 landing-question">What are you interested in?</h3>
-							<div class="col m2 input-field">
+							<h3 class="col m4 s12 landing-question">What are you interested in?</h3>
+							<div class="col m2 s3 input-field">
 								<div class="thumb-label">
 									<svg  x="0px" y="0px"
 										 viewBox="0 0 47 48" enable-background="new 0 0 47 48" xml:space="preserve">
@@ -63,7 +62,7 @@
 								<input class="thumb-input" role="radio" name="type-of-user" type="radio" id="casual" value="casual" checked="checked"/>
 								<label class="landing-label" for="casual">Casual</label>
 							</div>
-							<div class="col m2 input-field">
+							<div class="col m2 s3 input-field">
 								<div class="thumb-label">
 									<svg x="0px" y="0px"
 										 viewBox="0 0 47 52" enable-background="new 0 0 47 52" xml:space="preserve">
@@ -85,7 +84,7 @@
 								<input class="thumb-input" role="radio" name="type-of-user" type="radio" id="semibusiness" value="semibusiness" />
 								<label class="landing-label" for="semibusiness">Middle</label>
 							</div>
-							<div class="col m2 input-field">
+							<div class="col m2 s3 input-field">
 								<div class="thumb-label">
 									<svg x="0px" y="0px"
 										 viewBox="0 0 47 52" enable-background="new 0 0 47 52" xml:space="preserve">
@@ -120,12 +119,12 @@
 								<label class="landing-label" for="business">Business</label>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col m6 input-field">
+						<div class="row landing-cta ">
+							<div class="col m6 s12 input-field">
 								<input name="email" type="email" class="validate email-input">
 								<label class="email-label" for="email">Email</label>
 							</div>
-							<div class="col m6 input-field">
+							<div class="col m6 s12 input-field">
 								<button type="submit" class="waves-effect waves-light btn-large">Get Notified </button>
 							</div>
 
@@ -148,9 +147,10 @@
 
 	<!-- script -->
 	<script src="assets/js/jquery-2.1.4.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script> -->
 	<script src="https://maps.googleapis.com/maps/api/js?signed_in=false&libraries=places&callback=initMap"
         async defer></script>
+	<script src="assets/js/lib/bin/materialize.min.js"></script>
 	<script src="assets/js/script.js"></script>
 </body>
 
