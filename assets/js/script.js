@@ -1,75 +1,70 @@
 function initMap() {
-    var customMapType = new google.maps.StyledMapType([{
-            "stylers": [{
-                "visibility": "simplified"
+    var customMapType = new google.maps.StyledMapType(
+        [{
+                "stylers": [{
+                    "visibility": "simplified"
+                }, {
+                    "gamma": 5
+                }, {
+                    "weight": 0.25
+                }]
             }, {
-                "hue": "#74d1ff"
+                "featureType": "water",
+                "elementType": "labels",
+                "stylers": [{
+                    "visibility": "off"
+                }]
             }, {
-                "gamma": 5
+                "featureType": "poi",
+                "elementType": "labels.text",
+                "stylers": [{
+                    "visibility": "off"
+                }]
             }, {
-                "weight": 0.25
-            }]
-        }, {
-            "featureType": "water",
-            "elementType": "labels",
-            "stylers": [{
-                "visibility": "off"
-            }]
-        }, {
-            "featureType": "poi",
-            "elementType": "labels.text",
-            "stylers": [{
-                "visibility": "off"
-            }]
-        }, {
-            "featureType": "road",
-            "stylers": [{
-                "visibility": "simplified"
-            }]
-        }, {
-            "featureType": "road",
-            "elementType": "labels",
-            "stylers": [{
-                "visibility": "off"
-            }]
-        }, {
-            "featureType": "poi",
-            "elementType": "labels.icon",
-            "stylers": [{
-                "visibility": "simplified"
+                "featureType": "road",
+                "stylers": [{
+                    "visibility": "simplified"
+                }]
             }, {
-                "saturation": 32
+                "featureType": "road",
+                "elementType": "labels",
+                "stylers": [{
+                    "visibility": "off"
+                }]
+            },  {
+                "featureType": "landscape",
+                "stylers": [{
+                    "visibility": "off"
+                }]
             }, {
-                "hue": "#00ffc4"
+                "featureType": "transit",
+                "stylers": [{
+                    "visibility": "off"
+                }]
             }, {
-                "gamma": 0.5
-            }]
-        }, {
-            "featureType": "landscape",
-            "stylers": [{
-                "visibility": "off"
-            }]
-        }, {
-            "featureType": "transit",
-            "stylers": [{
-                "visibility": "off"
-            }]
-        }, {
-            "featureType": "administrative.neighborhood",
-            "stylers": [{
-                "visibility": "off"
-            }]
-        }, {
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#555555"
+                "featureType": "administrative.neighborhood",
+                "stylers": [{
+                    "visibility": "off"
+                }]
             }, {
-                "weight": 0.1
-            }, {
-                // "saturation": 30
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [
+                    {"color": "#00BCD4"},
+                    {"weight": 0.1},
+                    //{"saturation": -30}
+                ]
+            },{
+              "featureType": "poi",
+              //"elementType": "geometry",
+              "stylers": [
+                {"visibility": "off"},
+                { "color": "#B2EBF2" },
+                { "saturation": -100}
+              ]
             }]
-        }], {
+
+        , {
             name: 'Custom Style'
         });
     var customMapTypeId = 'custom_style';
@@ -118,7 +113,7 @@ function initMap() {
             map.fitBounds(place.geometry.viewport);
         } else {
             map.setCenter(place.geometry.location);
-            map.setZoom(14); // Why 17? Because it looks good.
+            map.setZoom(10); // Why 17? Because it looks good.
         }
         marker.setIcon( /** @type {google.maps.Icon} */ ({
             url: place.icon,
@@ -136,7 +131,7 @@ function initMap() {
 //prevent key enter to sumbit form
 function preventSubmit(e) {
   var code = e.keyCode || e.which;
-  if (code == 13) {
+  if (code == 14) {
     e.preventDefault();
     return false;
   }
@@ -144,9 +139,9 @@ function preventSubmit(e) {
 $('#pac-input').on('keyup keypress', preventSubmit);
 $('#signup').on('keyup keypress', preventSubmit);
 
-$('input.thumb-input:checked').siblings('.thumb-label').find('.svgfill').css({ "fill": "#00ffc4","fill-opacity": "0.5"});
+$('input.thumb-input:checked').siblings('.thumb-label').find('.svgfill').css({ "fill": "#009688","fill-opacity": "1"});
 
 $('.landing-label').on('click',function(){
     $('.svgfill').css({'fill-opacity':'0'});
-    $(this).siblings('.thumb-label').find('.svgfill').css({ "fill": "#00ffc4","fill-opacity": "0.5"});
+    $(this).siblings('.thumb-label').find('.svgfill').css({ "fill": "#009688","fill-opacity": "1"});
 });

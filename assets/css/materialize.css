@@ -3258,7 +3258,7 @@ ul li {
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
-  border-left: 5px solid #ee6e73;
+  border-left: 5px solid #00bcd4;
 }
 
 /* line 107, ../scss/components/_global.scss */
@@ -3318,7 +3318,7 @@ video.responsive-video {
 }
 /* line 156, ../scss/components/_global.scss */
 .pagination li.active {
-  background-color: #ee6e73;
+  background-color: #00bcd4;
 }
 /* line 158, ../scss/components/_global.scss */
 .pagination li.disabled a {
@@ -3493,7 +3493,7 @@ ul.staggered-list li {
 footer.page-footer {
   margin-top: 20px;
   padding-top: 20px;
-  background-color: #ee6e73;
+  background-color: #00bcd4;
 }
 /* line 310, ../scss/components/_global.scss */
 footer.page-footer .footer-copyright {
@@ -8426,7 +8426,7 @@ span.badge.new:after {
 /* line 1, ../scss/components/_navbar.scss */
 nav {
   color: #fff;
-  background-color: #ee6e73;
+  background-color: #00bcd4;
   width: 100%;
   height: 56px;
   line-height: 56px;
@@ -9120,7 +9120,7 @@ small {
 }
 /* line 21, ../scss/components/_tabs.scss */
 .tabs .tab a {
-  color: #ee6e73;
+  color: #00bcd4;
   display: block;
   width: 100%;
   height: 100%;
@@ -9129,11 +9129,11 @@ small {
 }
 /* line 27, ../scss/components/_tabs.scss */
 .tabs .tab a:hover {
-  color: #f9c9cb;
+  color: #3be9ff;
 }
 /* line 32, ../scss/components/_tabs.scss */
 .tabs .tab.disabled a {
-  color: #f9c9cb;
+  color: #3be9ff;
   cursor: default;
 }
 /* line 37, ../scss/components/_tabs.scss */
@@ -9141,7 +9141,7 @@ small {
   position: absolute;
   bottom: 0;
   height: 2px;
-  background-color: #f6b2b5;
+  background-color: #21e6ff;
   will-change: left, right;
 }
 
@@ -10999,7 +10999,7 @@ select {
 /* line 91, ../scss/components/_sideNav.scss */
 .side-nav .collapsible-body li.active,
 .side-nav.fixed .collapsible-body li.active {
-  background-color: #ee6e73;
+  background-color: #00bcd4;
 }
 /* line 94, ../scss/components/_sideNav.scss */
 .side-nav .collapsible-body li.active a,
