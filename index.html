@@ -40,7 +40,7 @@
 					</h1>
 					<h2 class="landing-subtagline">Take a Detour with a local, or share your favorite hideout with a distant friend.</h2>
 				</hgroup>
-				<section class="row landing-cta">
+				<section class="row landing-form">
 					<form id="signup" method="POST" action="http://api.cloudstitch.com/thisisken/magic-form-1/datasources/sheet">
 						<div class="row">
 							<h3 class="col m4 s12 landing-question">What kind of connection makes you tick?</h3>
@@ -124,6 +124,10 @@
 							<div class="col m6 s12 input-field">
 								<input name="email" type="email" class="validate email-input">
 								<label class="email-label" for="email">Email</label>
+								<p class="email-fineprint">
+									<input type="checkbox" id="subscribe" name="subscribe-to-newsletter"checked="checked" />
+      								<label for="subscribe">Receive free travel tips & news. Currently on: Detour in Tokyo.</label>
+	  							</p>
 							</div>
 							<div class="col m6 s12 input-field landing-cta-button">
 								<button type="submit" class="waves-effect waves-light btn-large">Get Notified </button>

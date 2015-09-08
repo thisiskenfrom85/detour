@@ -7,7 +7,7 @@ sass_dir = "."
 images_dir = "images"
 javascripts_dir = "javascripts"
 sass_options = {:sourcemap => true}
-# output_style = :compressed
+output_style = :compressed
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
@@ -16,7 +16,7 @@ sass_options = {:sourcemap => true}
 # relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-# line_comments = false
+line_comments = false
 
 
 # If you prefer the indented syntax, you might want to regenerate this
