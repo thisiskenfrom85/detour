@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg  x="0px" y="0px"
-	 viewBox="0 0 47 48" enable-background="new 0 0 47 48" xml:space="preserve">
-<g id="design">
-		<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-			M36.6,1H10.4C10.4,1,1,7.5,1,8.8v34.9C1,45.6,2.5,47,4.2,47h38.5c1.8,0,3.2-1.4,3.2-3.2V8.8C46,7.5,36.6,1,36.6,1z"/>
-		<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-			M23.5,7.4"/>
-		<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-			M12.8,1c0,0.1,0,0.2,0,0.4c0,3.7,4.8,9,10.7,9s10.7-5.3,10.7-9c0-0.1,0-0.2,0-0.4"/>
-		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="1" y1="20.4" x2="46" y2="20.4"/>
-		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="1" y1="29.6" x2="46" y2="29.6"/>
-		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="1" y1="38.8" x2="46" y2="38.8"/>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1500 1000" enable-background="new 0 0 1500 1000" xml:space="preserve">
+<filter  height="130%" xmlns="http://www.w3.org/2000/svg" id="dropshadow">
+	<feGaussianBlur  in="SourceAlpha" stdDeviation="3"></feGaussianBlur>
+	<feOffset  dy="2" dx="2" result="offsetblur"></feOffset>
+	<feComponentTransfer>
+		<feFuncA  type="linear" slope="0.2"></feFuncA>
+	</feComponentTransfer>
+	<feMerge>
+		<feMergeNode></feMergeNode>
+		<feMergeNode  in="SourceGraphic"></feMergeNode>
+	</feMerge>
+</filter>
+<g filter="url(#dropshadow)">
+	<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M1022.9,20.8H477.1c0,0-195.8,135.4-195.8,162.5v727.1c0,39.6,31.2,68.8,66.7,68.8H1150c37.5,0,66.7-29.2,66.7-66.7V183.3
+		C1218.8,156.2,1022.9,20.8,1022.9,20.8z"/>
+	<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M750,154.2"/>
+	<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M527.1,20.8c0,2.1,0,4.2,0,8.3c0,77.1,100,187.5,222.9,187.5S972.9,106.2,972.9,29.2c0-2.1,0-4.2,0-8.3"/>
+
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="281.2" y1="425" x2="1218.8" y2="425"/>
+
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="281.2" y1="616.7" x2="1218.8" y2="616.7"/>
+
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="281.2" y1="808.3" x2="1218.8" y2="808.3"/>
 </g>
 </svg>

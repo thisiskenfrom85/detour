@@ -140,8 +140,11 @@ $('#pac-input').on('keyup keypress', preventSubmit);
 $('#signup').on('keyup keypress', preventSubmit);
 
 $('input.thumb-input:checked').siblings('.thumb-label').find('.svgfill').css({ "fill": "#009688","fill-opacity": "1"});
+$('input.thumb-input:checked').siblings('.landing-label').css({ "color": "#B2EBF2"});
 
 $('.landing-label').on('click',function(){
     $('.svgfill').css({'fill-opacity':'0'});
+    $('.landing-label').css({'color':'#FFFFFF'});
     $(this).siblings('.thumb-label').find('.svgfill').css({ "fill": "#009688","fill-opacity": "1"});
+    $(this).css({ "color": "#B2EBF2"});
 });

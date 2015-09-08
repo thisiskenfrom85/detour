@@ -74,7 +74,7 @@ $divider-color:        #B6B6B6;
 }
 .landing-subtagline {
     font-size: 2.4rem;
-    font-weight: 100;
+    font-weight: 300;
     width: 80%;
     @include media('>=phone', '<=desktop') {
         font-size: 1.6rem;
@@ -98,19 +98,26 @@ input[type=text].inline-input {
 }
 .landing-question {
     @extend  %landing-inputs;
-    margin: 1.46rem 0 0 0;
     color: $primary-color-text;
+}
+.landing-choices {
+    margin: 1.46rem 0 ;
 }
 .input-field {
     .svgfill {
         transition: fill .4s ease;
         fill: rgba(0,0,0,0);
     }
-    &:hover .svgfill, &:active .svgfill {
+    &:hover {
+        .landing-label {
+            color: $primary-color-light;
+        }
+        .svgfill{
         fill: rgba($accent-color, 0.5);
+        }
     }
     .landing-label {
-        color: $primary-color-light;
+        color: $primary-color-text;
         &:before, &:after {
             content: none;
             padding-left: 0;
@@ -118,8 +125,10 @@ input[type=text].inline-input {
         &:not(:checked), &:checked {
                 padding-left: 0;
                 font-size: 1.4rem;
-                font-weight: 200;
-                @include media('>=phone', '<=desktop') {
+                font-weight: 400;
+                text-shadow: 0 5px 5px rgba(0, 0, 0, 0.18);
+                @include media('>=phone', '<=customized') {
+                    text-shadow: 0px 1px 3px $secondary-text-color;
                     font-size: 1rem;
                     text-align: center;
                     width: 100%;
@@ -147,7 +156,7 @@ input[type=text].inline-input {
 .thumb-label {
     width: 40px;
     display: inline-block;
-    @include media('>=phone', '<=desktop') {
+    @include media('>=phone', '<=customized') {
         display: block;
         width: 25px;
         margin: auto;
